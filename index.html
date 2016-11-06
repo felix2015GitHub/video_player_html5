@@ -1,0 +1,86 @@
+<html>
+<head>
+  <link href="video.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div>
+    <div>簡易播放器</div>
+    <div>
+      <span>Video URL:</span>
+      <input type="text" id="videoURL" size="100" value=""/>
+      <button id="goVideo" onclick="videoPlay()">Go</button>
+    </div>
+  </div>
+  <div class="videoContainer">
+    <div id="videoAppend"></div>
+    <!--
+    <div class="caption">
+      <div class="_album-title">
+        test(5)
+      </div>
+      <div class="likebox-title">
+        <span>Prometheus</span>
+      </div>
+      <div class="_social">
+        2016/11/03
+      </div>
+    </div>
+    -->
+    <div class="playRepeatBlock">
+      <i class="fa fa-play fa-5x" aria-hidden="true"></i>
+      <i class="fa fa-repeat fa-5x" aria-hidden="true"></i>
+    </div>
+    <div class="control">
+      <div class="btmControl">
+        <div class="btnPlay btn" title="Play/Pause video">
+          <i class="fa fa-play icon" aria-hidden="true"></i>
+          <i class="fa fa-pause icon" aria-hidden="true"></i>
+        </div>
+        <div class="timeGrp">
+          <span class="curtimetext">00:00</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progressContent">
+            <input id="slider" type="range" min="0" max="100" value="0" step="1"/>
+          </div>        
+        </div>
+        
+        <div class="timeGrp">
+          <span class="durtimetext">00:00</span>
+        </div>
+        <div class="sound sound2 btn" title="Mute/Unmute sound">
+          <div class="soundContent">
+            <div class="volumeChange">
+              <div class="volumeSliderBar">
+                <input id="volumeSlider" type="range" min="0" max="100" value="100" step="1"/>
+              </div>
+            </div>
+            <div class="volumeIcon">
+              <i class="fa fa-volume-up icon" aria-hidden="true"></i>
+              <i class="fa fa-volume-off icon" aria-hidden="true"></i>
+            </div>
+          </div>       
+        </div>
+        <div class="btnFS btn" title="Switch to full screen">
+          <i class="fa fa-expand icon" aria-hidden="true"></i>
+          <i class="fa fa-compress icon" aria-hidden="true"></i>
+        </div>
+      </div> 
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="video_player.js"></script>
+  <script type="text/javascript">
+    function videoPlay(){
+      var runVideo = new VideoPlayer2016();
+      runVideo.setup({
+        //videoURL: "http://streaming.pop6.com/ffadult/video/intros_mpgs_1000/028/428852323_53515-46803788864.3595028.mp4",
+        //videoURL: "https://www.youtube.com/embed/lN-GUBIMDNA?autoplay=1",
+        videoURL: $("#videoURL").val()
+      });
+    }
+  </script>
+</body>
+</html>
+
