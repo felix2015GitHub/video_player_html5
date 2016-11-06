@@ -243,6 +243,7 @@ function runFullScreen(){
 
 function endStatus(){
 	$(".playRepeatBlock").css("display", "block");
+	$(".playRepeatBlock i.fa-play").css("display", "none");
 	$(".playRepeatBlock i.fa-repeat").css("display", "block");
 	$(".btnPlay i.fa-play").css("display", "block");
 	$(".btnPlay i.fa-pause").css("display", "none");
